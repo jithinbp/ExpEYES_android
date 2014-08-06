@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ccaabb"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/results_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:text="LOOP END" />
+
+</LinearLayout>

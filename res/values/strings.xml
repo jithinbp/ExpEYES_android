@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ExpEYES Experiments</string>
+    <string name="hello_world">Hello world!</string>
+
+
+    <string name="remote_help">
+<![CDATA[
+<p>Example Python script to help test this..</p>
+
+<p>#--------------------------------------------------</p>
+
+<p>import socket<br />
+from pylab import *<br />
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)<br />
+s.connect((&#39;IP address shown above&#39;,Port displayed above))</p>
+
+<p>f = s.makefile()<br />
+s.send(&#39;get_voltage(1)\\n&#39;)<br />
+s.send(&#39;read(value)\\n&#39;)<br />
+print s.recv(100)</p>
+
+<p>s.send(&#39;capture(1,500,30)\\n&#39;) #capture 500 points<br />
+s.send(&#39;read(t1,ch1)\\n&#39;)<br />
+x=f.readline()<br />
+y=f.readline()<br />
+a=[float(i) for i in x.split(&#39;,&#39;)] #float array from ASCII string<br />
+b=[float(i) for i in y.split(&#39;,&#39;)]<br />
+plot(a,b)<br />
+show()</p>
+
+<p>&nbsp;</p>
+
+<p>#--------------------------------------------------</p>
+
+
+]]>
+    </string>
+    
+    
+    <string-array name="cmds">
+        <item>get_voltage</item>
+        <item>set_voltage</item>
+        <item>capture</item>
+        <item>get_version</item>
+    </string-array>
+ 
+        <string-array name="funcs">
+        <item>capture 1 channel,capture,chan1,int,1,7,numsamples,int,1,1800,timegap,int,4,1000</item>
+        <item>capture 2 channels,capture,chan1,int,1,7,chan2,int,1,7,NS,int,1,900,TG,int,4,1000</item>
+        <item>capture 3 channels,capture,chan1,int,1,7,chan2,int,1,7,chan3,int,1,7,NS,int,1,600,TG,int,4,1000</item>
+        <item>capture 4 channels,capture,ch1,int,1,7,ch2,int,1,7,ch3,int,1,7,ch4,int,1,7,NS,int,1,400,TG,int,4,1000</item>
+        <item>read voltage,get_voltage,channel,int,1,7</item>
+        <item>multi R2R time,multi_r2rtime,Pin,int,1,7,Skipcycle,int,0,100</item>
+        
+    </string-array>
+    
+    
+</resources>

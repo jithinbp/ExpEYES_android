@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pr"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="70"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/experiment_switches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/cmd"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Add function call" />
+
+            <Button
+                android:id="@+id/fit_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/cmd"
+                android:onClick="add_plot_widget"
+                android:text="Plot" />
+
+            <Button
+                android:id="@+id/compile_program"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:onClick="code_it"
+                android:text="COMPILE -->"
+                android:textColor="#009900" />
+
+            <Button
+                android:id="@+id/Button02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/fit_bt"
+                android:onClick="add_log_widget"
+                android:text="LOG" />
+
+            <Button
+                android:id="@+id/Button01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/Button02"
+                android:onClick="add_sleep_widget"
+                android:text="SLEEP" />
+
+            <Button
+                android:id="@+id/button2"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/compile_program"
+                android:onClick="add_loop_stop_widget"
+                android:text="end loop" />
+
+            <Button
+                android:id="@+id/button3"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/button2"
+                android:onClick="add_loop_start_widget"
+                android:text="start loop" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/gffd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/editor_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/compiler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/run_program"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="run_it"
+                android:text="RUN IT!!"
+                android:textColor="#009900" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sdfjkbg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:id="@+id/tscroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/prog_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

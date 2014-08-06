@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    tools:context="${packageName}.${activityClass}" >
+	
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        android:background="#888899" >
+
+        <LinearLayout
+            android:id="@+id/switches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <Switch
+                android:id="@+id/A1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#444444"
+                android:text="A1" />
+
+            <Switch
+                android:id="@+id/A2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#ff0000"
+                android:text="A2" />
+
+            <Switch
+                android:id="@+id/IN1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#00aa00"
+                android:text="IN1" />
+
+            <Switch
+                android:id="@+id/IN2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#0000ff"
+                android:text="IN2" />
+
+            <Switch
+                android:id="@+id/SEN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#00ffff"
+                android:text="SEN" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switches"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="duration(S)"
+                android:inputType="number" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/interval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="interval(mS)"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/start_logger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="start"
+                android:text="START" />
+            
+            <Button
+                android:id="@+id/stop_logger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="stop"
+                android:text="STOP" />        
+        </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/saving"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical" >
+
+                </RelativeLayout>
+    
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="30" >
+
+        <LinearLayout
+            android:id="@+id/logger_plot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/savefile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:onClick="dumpToFile"
+            android:text="Save traces" />
+
+    </RelativeLayout>
+
+</LinearLayout>

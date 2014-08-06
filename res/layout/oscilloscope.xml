@@ -1,0 +1,143 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    tools:context="${packageName}.${activityClass}" >
+	
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        android:background="#888899" >
+
+        <LinearLayout
+            android:id="@+id/switches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <Switch
+                android:id="@+id/A1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="A1" />
+
+            <Switch
+                android:id="@+id/A2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="A2" />
+
+            <Switch
+                android:id="@+id/IN1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="IN1" />
+
+            <Switch
+                android:id="@+id/IN2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="IN2" />
+
+            <Switch
+                android:id="@+id/SEN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="SEN" />
+
+            <Switch
+                android:id="@+id/SQ1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="SQ1" />
+
+            <Switch
+                android:id="@+id/SQ2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="SQ2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switches"
+            android:orientation="vertical" >
+
+            <SeekBar
+                android:id="@+id/timebase_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:indeterminate="false"
+                android:max="9"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/timebase_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.1ms/div" />
+        
+        </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/saving"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/savefile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="dumpToFile"
+                    android:text="Save and e-mail" />
+
+                </RelativeLayout>
+    
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="30" >
+
+        <LinearLayout
+            android:id="@+id/scope_plot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/FREQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:text="Tap graph to Sine fit curves"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+</LinearLayout>
