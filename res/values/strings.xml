@@ -39,11 +39,9 @@ show()</p>
     </string>
     
     
-    <string-array name="cmds">
-        <item>get_voltage</item>
-        <item>set_voltage</item>
-        <item>capture</item>
-        <item>get_version</item>
+    <string-array name="time_exp_list">
+        <item>rod pendulum >multi_r2rtime(6,0)</item>
+
     </string-array>
  
         <string-array name="funcs">

@@ -1,5 +1,7 @@
 package com.expeyesexperiments;
 
+import java.text.DecimalFormat;
+
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
@@ -15,6 +17,11 @@ public class expeyesCommon{
 	    private devhandler mcp2200;
 	    public ejlib ej;
 	    public boolean connected=false;
+	    public DecimalFormat df1 = new DecimalFormat("#.#");
+	    public DecimalFormat df2 = new DecimalFormat("#.##");
+	    public DecimalFormat df3 = new DecimalFormat("#.###");
+	    public DecimalFormat df6 = new DecimalFormat("#.######");
+	    
 	    protected expeyesCommon() {
 	      // Exists only to defeat instantiation.
 		   timestamp = System.currentTimeMillis();
@@ -22,6 +29,7 @@ public class expeyesCommon{
 	    public boolean open_device(devhandler dev){
 	    	mcp2200 = dev;
 	    	ej = new ejlib(mcp2200);
+	    	
          	if(!ej.open()){
          		Log.e("ERROR",ej.message);  
          		return false;}
@@ -53,8 +61,21 @@ public class expeyesCommon{
 	        return builder1;
 		    }
 	    
-
-
+		   public int toInt(String txt) {
+				if (txt == null || txt.isEmpty()) {
+					return 0;
+				} else {
+					return Integer.parseInt(txt);
+				}
+			}
+			
+		   public double toDouble(String txt) {
+				if (txt == null || txt.isEmpty()) {
+					return 0;
+				} else {
+					return Double.parseDouble(txt);
+				}
+			}
 	    
 	    
 	    

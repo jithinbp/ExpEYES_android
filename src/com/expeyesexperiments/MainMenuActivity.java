@@ -33,7 +33,7 @@ public class MainMenuActivity extends Activity {
 	private static final String ACTION_USB_PERMISSION = "com.android.example.USB_PERMISSION";
     private PendingIntent mPermissionIntent;
 	Button capacitor_button,inductor_button,RLC_button,TandM_button,diodeIV_button,scope_button,logger_button,custom_button;
-	Button RLCPhase_button,IC555_button;
+	Button RLCPhase_button,IC555_button,transistorCE_button,emind_button,TIMELOGGER_button,RODPEND_button;
 	expeyesCommon ej;
 	IntentFilter filter;
 	public Builder about_dialog;
@@ -221,6 +221,16 @@ public class MainMenuActivity extends Activity {
                 startActivity(intent);   
  			}
  		});
+ 
+		transistorCE_button = (Button) findViewById(R.id.TRANSISTOR);
+ 		transistorCE_button.setOnClickListener(new OnClickListener() {
+ 			@Override
+			public void onClick(View arg0) {
+ 				if(!ej.connected){Toast.makeText(getBaseContext(),"No device connected. Open menu and reconnect.",Toast.LENGTH_SHORT).show();return;}
+ 			    Intent intent = new Intent(context, TransistorCE.class);
+                startActivity(intent);   
+ 			}
+ 		});
  		
 		scope_button = (Button) findViewById(R.id.SCOPE);
  		scope_button.setOnClickListener(new OnClickListener() {
@@ -242,6 +252,16 @@ public class MainMenuActivity extends Activity {
  			}
  		}); 	
 
+		emind_button = (Button) findViewById(R.id.EMIND);
+ 		emind_button.setOnClickListener(new OnClickListener() {
+ 			@Override
+			public void onClick(View arg0) {
+ 				if(!ej.connected){Toast.makeText(getBaseContext(),"No device connected. Open menu and reconnect.",Toast.LENGTH_SHORT).show();return;}
+ 			    Intent intent = new Intent(context, EMInduction.class);
+                startActivity(intent);   
+ 			}
+ 		}); 	
+ 		
 		custom_button = (Button) findViewById(R.id.CUSTOM);
  		custom_button.setOnClickListener(new OnClickListener() {
  			@Override
@@ -260,7 +280,26 @@ public class MainMenuActivity extends Activity {
                 startActivity(intent);   
  			}
  		}); 		
-	
+
+		TIMELOGGER_button = (Button) findViewById(R.id.TIMELOGGER);
+		TIMELOGGER_button.setOnClickListener(new OnClickListener() {
+ 			@Override
+			public void onClick(View arg0) {
+ 				if(!ej.connected){Toast.makeText(getBaseContext(),"No device connected. Open menu and reconnect.",Toast.LENGTH_SHORT).show();return;}
+ 			    Intent intent = new Intent(context, TimeLogger.class);
+                startActivity(intent);   
+ 			}
+ 		}); 
+
+		RODPEND_button = (Button) findViewById(R.id.RODPEND);
+		RODPEND_button.setOnClickListener(new OnClickListener() {
+ 			@Override
+			public void onClick(View arg0) {
+ 				if(!ej.connected){Toast.makeText(getBaseContext(),"No device connected. Open menu and reconnect.",Toast.LENGTH_SHORT).show();return;}
+ 			    Intent intent = new Intent(context, RodPendulum.class);
+                startActivity(intent);   
+ 			}
+ 		}); 
 	}	
  		
  	
@@ -304,7 +343,7 @@ public class MainMenuActivity extends Activity {
  		                    			Toast.makeText(getBaseContext(),"Device found!!",Toast.LENGTH_SHORT).show();
  		                    	}
  		                    	else{
- 		                    		Toast.makeText(getBaseContext(),"Something went wrong!!  Reconnect device",Toast.LENGTH_SHORT).show();
+ 		                    		Toast.makeText(getBaseContext(),"Problem!! "+ej.ej.message +". Reconnect device",Toast.LENGTH_SHORT).show();
  		                    	}
  		                   }
  		                    else{

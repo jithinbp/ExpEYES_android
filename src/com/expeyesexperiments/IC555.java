@@ -41,8 +41,7 @@ public class IC555 extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ic_555);
-		Toast.makeText(getBaseContext(),"IC555 MEASUREMENTS",Toast.LENGTH_SHORT).show();
-
+		
 		
 		dataDirectory = new File(Environment.getExternalStorageDirectory()+"/expeyes/IC555/");
 		//Log.e("DIR",dataDirectory.getName());

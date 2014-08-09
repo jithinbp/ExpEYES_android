@@ -28,7 +28,7 @@
                 android:id="@+id/TandM"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:layout_margin="10dp"
                 android:background="@drawable/top_panel"
                 android:text="Set&amp;Measure"
@@ -49,7 +49,7 @@
                 android:id="@+id/RC"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:layout_margin="10dp"
                 android:background="@drawable/rc_curves"
                 android:text="RC circuits"
@@ -59,7 +59,7 @@
                 android:id="@+id/RL"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:layout_margin="10dp"
                 android:background="@drawable/rl_curves"
                 android:text="RL circuits"
@@ -69,7 +69,7 @@
                 android:id="@+id/RLC"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:layout_margin="10dp"
                 android:background="@drawable/rlc_curves"
                 android:text="RLC circuits"
@@ -99,30 +99,67 @@
                 android:id="@+id/DIODE"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:layout_margin="10dp"
                 android:background="@drawable/diode_iv_screen"
                 android:text="Diode IV"
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/TRANSISTOR"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="top"
+                android:layout_margin="10dp"
+                android:background="@drawable/transistor_ce"
+                android:text="Transistor CE"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/EMIND"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="top"
+                android:layout_margin="10dp"
+                android:background="@drawable/induction_screen"
+                android:text="EM\nInduction"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/RODPEND"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="top"
+                android:layout_margin="10dp"
+                android:background="@drawable/pendulum_screen"
+                android:text="Rod Pendulum"
+                android:textStyle="bold" />                        
+            <Button
                 android:id="@+id/LOGGER"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:layout_margin="10dp"
                 android:background="@drawable/pendulum_screen"
                 android:text="Data Logger"
                 android:textStyle="bold" />
-
+            <Button
+                android:id="@+id/TIMELOGGER"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="top"
+                android:layout_margin="10dp"
+                android:background="@drawable/pendulum_screen"
+                android:text="Time Interval Logger"
+                android:textStyle="bold" />
+            
             <Button
                 android:id="@+id/CUSTOM"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:layout_margin="10dp"
                 android:background="#aabbee"
-                android:text="Commands"
+                android:text="Commands\n(Beta)"
                 android:textStyle="bold" />
             
         </GridLayout>

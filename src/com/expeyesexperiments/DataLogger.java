@@ -55,7 +55,7 @@ public class DataLogger extends Activity {
 		super.onCreate(savedInstanceState);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.data_logger);
-		Toast.makeText(getBaseContext(),"Data Logger",Toast.LENGTH_SHORT).show();
+		
 		
 		
 		dataDirectory = new File(Environment.getExternalStorageDirectory()+"/expeyes/logger/");
@@ -110,7 +110,7 @@ public class DataLogger extends Activity {
 		super.onDestroy();
 		running=false;
 		
-		Toast.makeText(getBaseContext(),"RETURNING TO MAIN MENU",Toast.LENGTH_SHORT).show();
+		//Toast.makeText(getBaseContext(),"RETURNING TO MAIN MENU",Toast.LENGTH_SHORT).show();
 	}
  
 	public void load_channel(CompoundButton buttonView, boolean isChecked){

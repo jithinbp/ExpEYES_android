@@ -59,7 +59,7 @@
                 android:text="LOG" />
 
             <Button
-                android:id="@+id/Button01"
+                android:id="@+id/experiment_selector"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonStyleSmall"

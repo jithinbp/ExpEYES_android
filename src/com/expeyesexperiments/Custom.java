@@ -65,7 +65,7 @@ public class Custom extends Activity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_custom_experiment);
-		Toast.makeText(getBaseContext(),"Create your own programs",Toast.LENGTH_SHORT).show();
+		
 		display = getWindowManager().getDefaultDisplay();
 		mainlayout = (LinearLayout)findViewById(R.id.ll1);
 		prlayout = (LinearLayout)findViewById(R.id.pr);
@@ -182,7 +182,7 @@ public class Custom extends Activity{
 	@Override
 	public void onDestroy(){
 		super.onDestroy();
-		Toast.makeText(getBaseContext(),"RETURNING TO MAIN MENU",Toast.LENGTH_SHORT).show();
+		
 	}
  
 	public void code_it(View vvv){

@@ -29,14 +29,11 @@ public class custom_program extends Activity {
 	
 	boolean interpreter_running=false;
 	interpreter_input inp;
-	
-	DecimalFormat df = new DecimalFormat("#.###");
-	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.program_running);
-		Toast.makeText(getBaseContext(),"CUSTOM CODE RUNNING",Toast.LENGTH_SHORT).show();
+		
 		setTitle("Custom code...");
 		
 		ej = expeyesCommon.getInstance();
@@ -117,7 +114,7 @@ public class custom_program extends Activity {
 	    	else if(fn_call instanceof interpreter_input.log){
 	    		interpreter_input.log fn = (interpreter_input.log)fn_call;
 	    		results_txt.append(fn.mnemonic+" : ");
-	    		if(fn.ddata)results_txt.append(df.format(ej.ej.ejdata.ddata)+"V   ");
+	    		if(fn.ddata)results_txt.append(ej.df3.format(ej.ej.ejdata.ddata));
 	    		if(fn.timestamp)results_txt.append(ej.ej.ejdata.timestamp+"   ");
 	    		results_txt.append("\n");
 	    		sv.post(new Runnable() {

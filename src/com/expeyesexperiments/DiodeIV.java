@@ -46,8 +46,7 @@ public class DiodeIV extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_diode_experiment);
-		Toast.makeText(getBaseContext(),"Diode Current-Voltage characteristics",Toast.LENGTH_SHORT).show();
-
+		
 		
 		dataDirectory = new File(Environment.getExternalStorageDirectory()+"/expeyes/diode/");
 		Log.e("DIR",dataDirectory.getName());
@@ -75,7 +74,7 @@ public class DiodeIV extends Activity {
 		super.onDestroy();
 		running=false;
 		t.interrupt();
-		Toast.makeText(getBaseContext(),"RETURNING TO MAIN MENU",Toast.LENGTH_SHORT).show();
+		
 	}
  
 	public void start(View v){
